@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{selectedItem.title}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <!-- <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+          <ion-thumbnail item-start>
+              <ion-img src="assets/imgs/{{item.icon}}"></ion-img>
+          </ion-thumbnail>
+        <div class="item-note" item-end>
+          {{item.note}}
+        </div>
+      </button>
+    </ion-list>
+  </ion-content> -->
+
+  <!-- <ion-content class="card-background-page">
+
+      <ion-card *ngFor="let item of items" (click)="itemTapped($event, item)">
+        <img src="assets/imgs/{{item.icon}}"/>
+        <div class="card-title">{{item.title}}</div>
+        <div class="card-subtitle">{{item.note}}</div>
+      </ion-card>
+  </ion-content>   -->
+ 
+  <ion-content class="card-background-page">
+ 
+  <ion-grid>
+    <ion-row *ngFor="let row of grid">
+        <ion-col width-50 *ngFor="let item of row">
+            <ion-card (click)="itemTapped($event, item)">
+                <img *ngIf="item.icon" src="assets/imgs/{{item.icon}}"/>
+                <!-- <div class="card-title">{{item.title}}</div> -->
+                <div class="card-subtitle"><ion-icon name="play"></ion-icon></div>
+              </ion-card>
+          </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content> 

@@ -6,6 +6,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+
+export interface PageInterface {
+  title: string;
+  name: string;
+  component: any;
+  icon: string;
+  logsOut?: boolean;
+  index?: number;
+  tabName?: string;
+  tabComponent?: any;
+}
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -22,7 +34,16 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Piemont Echo Protococol', component: ListPage },
+      { title: 'Piemont Parameter', component: ListPage },
+      { title: 'Piemont Tips/Guide', component: ListPage },
+      { title: 'Chambers', component: ListPage },
+      { title: 'Valves', component: ListPage },
+      { title: 'Pericardium', component: ListPage },
+      { title: 'AORTA,SVC,IVC', component: ListPage },
+      { title: 'Formulas/Calculation', component: ListPage },
+      { title: 'Disease', component: ListPage },
+      { title: 'Links', component: ListPage }
     ];
 
   }
@@ -41,5 +62,22 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  
+  isActive(page: PageInterface) {
+    let childNav = this.nav.getActiveChildNavs()[0];
+
+    // Tabs are a special case because they have their own navigation
+    if (childNav) {
+      if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
+        return 'primary';
+      }
+      return;
+    }
+
+    if (this.nav.getActive() && this.nav.getActive().name === page.name) {
+      return 'primary';
+    }
+    return;
   }
 }
