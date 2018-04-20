@@ -5,6 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
+
 
 
 export interface PageInterface {
@@ -27,24 +30,26 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
+  items:Observable<any[]>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public menuCtrl: MenuController) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public menuCtrl: MenuController,afDB: AngularFireDatabase) {
     this.initializeApp();
 
+    this.items = afDB.list('/menu_items',ref => ref.orderByChild('order')).valueChanges();
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Piemont Echo Protococol', component: ListPage },
-      { title: 'Piemont Parameter', component: ListPage },
-      { title: 'Piemont Tips/Guide', component: ListPage },
-      { title: 'Chambers', component: ListPage },
-      { title: 'Valves', component: ListPage },
-      { title: 'Pericardium', component: ListPage },
-      { title: 'AORTA,SVC,IVC', component: ListPage },
-      { title: 'Formulas/Calculation', component: ListPage },
-      { title: 'Disease', component: ListPage },
-      { title: 'Links', component: ListPage }
-    ];
+    // this.pages = [
+    //   { title: 'Home', component: HomePage },
+    //   { title: 'Piemont Echo Protococol', component: ListPage },
+    //   { title: 'Piemont Parameter', component: ListPage },
+    //   { title: 'Piemont Tips/Guide', component: ListPage },
+    //   { title: 'Chambers', component: ListPage },
+    //   { title: 'Valves', component: ListPage },
+    //   { title: 'Pericardium', component: ListPage },
+    //   { title: 'AORTA,SVC,IVC', component: ListPage },
+    //   { title: 'Formulas/Calculation', component: ListPage },
+    //   { title: 'Disease', component: ListPage },
+    //   { title: 'Links', component: ListPage }
+    // ];
 
   }
 
@@ -63,7 +68,7 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
-  
+
   isActive(page: PageInterface) {
     let childNav = this.nav.getActiveChildNavs()[0];
 

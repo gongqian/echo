@@ -14,8 +14,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { firebaseConfig } from '../environment';
+import { MenuItemServiceProvider } from '../providers/menu-item-service/menu-item-service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,9 @@ import { firebaseConfig } from '../environment';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    AngularFireDatabase,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MenuItemServiceProvider
   ]
 })
 export class AppModule {}
