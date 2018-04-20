@@ -1,8 +1,8 @@
 {
   "name": "echo",
-  "app_id": "2f1d55f2",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "app_id": "2f1d55f2"
 }
