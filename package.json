@@ -1,11 +1,11 @@
 {
-  "name": "ionic-conference-app",
+  "name": "piedmond-hospital-echo",
   "version": "0.0.0",
-  "description": "Ionic Conference App",
+  "description": "Piedmond Hospital Echo",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/ionic-conference-app.git"
+    "url": "https://github.com/gongqian/echo.git"
   },
   "scripts": {
     "build": "ionic-app-scripts build",

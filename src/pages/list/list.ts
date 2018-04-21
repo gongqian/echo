@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, IonicPage} from 'ionic-angular';
+import { NavController, NavParams, IonicPage } from 'ionic-angular';
 import { SubListPage } from '../../pages/sublist/sublist';
 import { MenuItem } from '../../models/Menu_Item'
 import { AngularFireDatabase } from 'angularfire2/database';
@@ -25,28 +25,7 @@ export class ListPage {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
-    //console.log(this.selectedItem)
-
-   this.items = afDB.list('/'+ this.selectedItem.child_items, ref => ref.orderByChild('order')).valueChanges()
-
-    console.log(this.items)
-
-    // Let's populate this page with some filler content for funzies
-    // this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    // 'american-football', 'boat', 'bluetooth', 'build'];
-
-    // this.items = [
-    //   {
-    //     title:"Trans-throacic Echo Protocol",
-    //     note:"9 modules",
-    //     icon:"aov(1).jpg"
-    //   },
-    //   {
-    //     title:"Trans-Esophageal Echo Protocol",
-    //     note:"9 modules",
-    //     icon:"aov(3).jpg"
-    //   }
-    // ];
+    this.items = afDB.list('/' + this.selectedItem.child_items, ref => ref.orderByChild('order')).valueChanges()
   }
 
   itemTapped(event, item) {

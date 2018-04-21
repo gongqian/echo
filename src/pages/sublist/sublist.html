@@ -8,18 +8,17 @@
 </ion-header>
 <ion-content class="card-background-page">
   <ion-grid>
-    <ion-row *ngFor="let row of grid">
-      <ion-col width-50 *ngFor="let item of row">
-        <ion-card (click)="itemTapped($event, item)">
-          <img *ngIf="item.icon" src="assets/imgs/{{item.icon}}" />
-          <!-- <div class="card-title">{{item.title}}</div> -->
-          <div class="card-subtitle" *ngIf="item.url.endsWith('mp4'); else cardTemp;">
-            <ion-icon name="play"></ion-icon>
-          </div>
-          <ng-template #cardTemp></ng-template>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
+      <ion-row>
+        <ion-col col-6 col-md-4 col-xl-3 *ngFor="let item of items| async">
+            <ion-card (click)="itemTapped($event, item)">
+                <img *ngIf="item.icon_url" src="assets/imgs/{{item.icon_url}}" alt="No Image"/>
+                <!-- <div class="card-title">{{item.title}}</div> -->
+                <div class="card-subtitle" *ngIf="item.media_url.endsWith('mp4'); else cardTemp;">
+                  <ion-icon name="play"></ion-icon>
+                </div>
+                <ng-template #cardTemp></ng-template>
+              </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>
