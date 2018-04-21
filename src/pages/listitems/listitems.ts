@@ -23,6 +23,6 @@ export class ListItemsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.selectedItem = navParams.get('item');
-    this.isVideo = this.selectedItem.url.endsWith("mp4");
+    this.isVideo = this.selectedItem.media_url.endsWith("mp4");
   }
 }

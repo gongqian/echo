@@ -99,7 +99,6 @@ export class SubListPage {
   }
 
   itemTapped(event, item) {
-    console.log(item);
     this.navCtrl.push('list-items-page', {
       item: item
     });
