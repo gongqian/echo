@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, IonicPage } from 'ionic-angular';
 import { ListItemsPage} from '../listitems/listitems';
 
 @Component({
   selector: 'page-sub-list',
   templateUrl: 'sublist.html'
 })
+@IonicPage(
+  {
+    name: "sub-list-page"
+  }
+)
 export class SubListPage {
   selectedItem: any;
   items: Array<{url: string, note: string, order:number, icon: string}>;
@@ -227,11 +232,11 @@ export class SubListPage {
   ionViewLoaded() {
 
     let rowNum = 0; //counter to iterate over the rows in the grid
-  
+
     for (let i = 0; i < this.items.length; i+=2) { //iterate images
-  
+
       this.grid[rowNum] = Array(2); //declare two elements per row
-  
+
       if (this.items[i]) { //check file URI exists
         if(!this.items[i].icon){
           this.items[i].icon="aov(1).jpg"
@@ -239,24 +244,24 @@ export class SubListPage {
 
         this.grid[rowNum][0] = this.items[i] //insert image
       }
-  
+
       if (this.items[i+1]) { //repeat for the second image
         if(!this.items[i+1].icon)
           this.items[i+1].icon="aov(1).jpg"
         this.grid[rowNum][1] = this.items[i+1]
       }
-  
+
       rowNum++; //go on to the next row
     }
-  
+
   }
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
     console.log(event);
     console.log(item);
-    
-    this.navCtrl.push(ListItemsPage, {
+
+    this.navCtrl.push('list-items-page', {
       item: item
     });
   }

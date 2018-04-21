@@ -2,77 +2,77 @@
   "menu_items": {
     "item1": {
       "child_items": "",
-      "component": "HomePage",
+      "component": "home-page",
       "icon_name": "headset",
       "order": 1,
       "title": "Home"
     },
     "item2": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 2,
       "title": "Piemont Echo Protococol"
     },
     "item3": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 3,
       "title": "Piemont Parameter"
     },
     "item4": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 4,
       "title": "Piemont Tips/Guide"
     },
     "item5": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 5,
       "title": "Chambers"
     },
     "item6": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 6,
       "title": "Valves"
     },
     "item7": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 7,
       "title": "Pericardium"
     },
     "item8": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 8,
       "title": "AORTA,SVC,IVC"
     },
     "item9": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 9,
       "title": "Formulas/Calculation"
     },
     "item10": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 10,
       "title": "Disease"
     },
     "item11": {
       "child_items": "protocoles_items",
-      "component": "ListPage",
+      "component": "list-page",
       "icon_name": "headset",
       "order": 11,
       "title": "Links"
