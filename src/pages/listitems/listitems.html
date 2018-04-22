@@ -5,11 +5,11 @@
       </button>
       </ion-navbar>
 </ion-header>
- 
-    <ion-content> 
+
+    <ion-content>
           <ion-card>
             <div *ngIf="isVideo; else imageTemp;" >
-              <video   width="100%" controls autoplay>
+              <video   width="100%" controls autoplay autoplay loop muted playsinline looped preload="auto">
                   <source src="assets/videos/{{selectedItem.url}}" type="video/mp4">
               </video>
               </div>

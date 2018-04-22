@@ -16,6 +16,10 @@ ionic cordova platform remove android
   ionic cordova platform add android@6.4.0 
   ionic cordova build android
 
+  ionic cordova platform add ios
+
+  ionic cordova run ios
+
 /*firebase*/
 node -v
 v8.9.3 /9.4
