@@ -9,8 +9,8 @@
     <ion-content>
           <ion-card>
             <div *ngIf="isVideo; else imageTemp;" >
-              <video   width="100%" controls autoplay autoplay loop muted playsinline looped preload="auto">
-                  <source src="assets/videos/{{selectedItem.url}}" type="video/mp4">
+              <video   width="100%" controls autoplay loop muted playsinline webkit-playsinline looped>
+                  <source src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/videos%2F{{selectedItem.media_url}}?alt=media" type="video/mp4">
               </video>
               </div>
               <ion-card-content>

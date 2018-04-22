@@ -1,7 +1,7 @@
 {
   "menu_items": {
     "item1": {
-      "child_items": "",
+      "child_items": "home",
       "component": "home-page",
       "icon_name": "headset",
       "order": 1,
@@ -76,6 +76,13 @@
       "icon_name": "headset",
       "order": 11,
       "title": "Links"
+    }
+  },
+  "home" :{
+    "content" : {
+      "media_url" : "test.mp4",
+      "description" : "blabla",
+      "comments" : "Test comment"
     }
   },
   "protocoles_items": {

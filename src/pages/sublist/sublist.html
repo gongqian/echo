@@ -11,7 +11,7 @@
       <ion-row>
         <ion-col col-6 col-md-4 col-xl-3 *ngFor="let item of items| async">
             <ion-card (click)="itemTapped($event, item)">
-                <img  src="assets/imgs/{{item.icon_url}}" alt="No Image" *ngIf="item.media_url.endsWith('mp4'); else cardTemp;" />
+                <img  src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/video_preview%2F{{item.icon_url}}?alt=media" alt="No Image" *ngIf="item.media_url.endsWith('mp4'); else cardTemp;" />
                 <div class="card-subtitle">
                   <ion-icon name="play"></ion-icon>
                 </div>
