@@ -1,0 +1,66 @@
+{
+  "menu_items": {
+    "item1": {
+      "child_items": "home",
+      "component": "home-page",
+      "icon_name": "headset",
+      "order": 1,
+      "title": "Home"
+    },
+    "item2": {
+      "child_items": "protocoles_items",
+      "component": "list-page",
+      "icon_name": "headset",
+      "order": 2,
+      "title": "Piemont Echo Protococol"
+    }
+  },
+
+
+  "protocoles_items": {
+    "item1": {
+      "child_items": "trans_throacic_items",
+      "icon_url": "aov(1).jpg",
+      "note": "",
+      "title": "Trans-throacic Echo Protocol"
+    },
+    "item2": {
+      "child_items": "trans_esophageal_items",
+      "icon_url": "aov(3).jpg",
+      "note": "",
+      "title": "Trans-Esophageal Echo Protocol"
+    }
+  },
+
+
+  "trans_throacic_items": {
+    "item1": {
+      "icon_url": "a_m_t(1).jpg",
+      "media_url": "a_m_t(1).mp4",
+      "note": "Optimize the apical 4-ch to include LV, RV, LA and RA. Narrow the b-mode sector to increase frame rates. Do not forshorten. Acquire 3 beat acquistions.",
+      "order": 1
+    },
+    "item2": {
+      "icon_url": "lh(1).jpg",
+      "media_url": "lh(1).mp4",
+      "note": "Optimize the apical 2-ch to include LV and LA.Do not forshorten. Acquire 3 beat acquistions.",
+      "order": 2
+    }
+  },
+
+
+  "trans_esophageal_items": {
+    "item1": {
+      "icon_url": "a_m_t(1).jpg",
+      "media_url": "a_m_t(1).mp4",
+      "note": "Optimize the apical 4-ch to include LV, RV, LA and RA. Narrow the b-mode sector to increase frame rates. Do not forshorten. Acquire 3 beat acquistions.",
+      "order": 1
+    },
+    "item2": {
+      "icon_url": "lh(1).jpg",
+      "media_url": "lh(1).mp4",
+      "note": "Optimize the apical 2-ch to include LV and LA.Do not forshorten. Acquire 3 beat acquistions.",
+      "order": 2
+    }
+  }
+}
