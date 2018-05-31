@@ -60,6 +60,7 @@
     "ws": "3.3.2"
   },
   "config": {
+    "ionic_enable_lint": false,
     "ionic_aot_write_to_disk": true
   },
   "cordova": {

@@ -1,12 +1,12 @@
-import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform,MenuController,AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { ListPage } from '../pages/list/list';
+// import { ListPage } from '../pages/list/list';
 import { Observable } from 'rxjs/Observable';
 import { Subscription} from 'rxjs';
-import { EchoServiceProvider } from '../providers/EchoService/echo-service'
+// import { EchoServiceProvider } from '../providers/EchoService/echo-service'
 import { MenuItems } from '../models/Menu_Items'
 import { AngularFireDatabase } from 'angularfire2/database';
 import {MenuItem} from '../models/Menu_Item';
@@ -18,7 +18,7 @@ import { SideMenuContentComponent } from './../shared/side-menu-content/side-men
 
 // RxJS
 import { ReplaySubject } from "rxjs/ReplaySubject";
-import { ArrayObservable } from "rxjs/observable/ArrayObservable";
+// import { ArrayObservable } from "rxjs/observable/ArrayObservable";
 
 export interface PageInterface {
   title: string;

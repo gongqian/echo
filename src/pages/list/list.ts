@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, IonicPage } from 'ionic-angular';
-import { SubListPage } from '../../pages/sublist/sublist';
+// import { SubListPage } from '../../pages/sublist/sublist';
 import { MenuItem } from '../../models/Menu_Item'
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs/Observable';
 
 
 

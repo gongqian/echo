@@ -86,6 +86,7 @@
         <variable name="CHANNEL_NAME" value="Master" />
         <variable name="UPDATE_METHOD" value="background" />
     </plugin>
+    <engine name="ios" spec="4.5.4" />
     <engine name="android" spec="7.0.0" />
-    <engine name="ios" spec="~4.5.4" />
+    <allow-navigation href="http://192.168.5.136:8101" />
 </widget>
