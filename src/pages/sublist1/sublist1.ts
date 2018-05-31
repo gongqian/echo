@@ -5,15 +5,15 @@ import { Observable } from 'rxjs/Observable';
 
 
 @Component({
-  selector: 'page-sub-list',
-  templateUrl: 'sublist.html'
+  selector: 'page-sub-list1',
+  templateUrl: 'sublist1.html'
 })
 @IonicPage(
   {
-    name: "sub-list-page"
+    name: "sub-list1-page"
   }
 )
-export class SubListPage {
+export class SubList1Page {
   selectedItem: any;
   items: any;
   grid: Array<Array<any>>;
@@ -21,7 +21,7 @@ export class SubListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, afDB: AngularFireDatabase) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
-    this.items = afDB.list('/' + this.selectedItem, ref => ref.orderByChild('order')).valueChanges();
+    this.items = afDB.list('/' + this.selectedItem.child_items, ref => ref.orderByChild('order')).valueChanges();
     // .subscribe(
     //   data => {
     //     this.items = data;

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, Injector } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
@@ -18,9 +18,16 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { firebaseConfig } from '../environment';
 //import { EchoServiceProvider } from '../providers/EchoService/echo-service';
 
+// Custom components
+import { SideMenuContentComponent } from '../shared/side-menu-content/side-menu-content.component';
+// import {BasicPage} from '../pages/basic/basic'
+
+
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    SideMenuContentComponent
+    // BasicPage
     // HomePage,
     // ListPage,
     // SubListPage,
@@ -36,6 +43,7 @@ import { firebaseConfig } from '../environment';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp
+    // BasicPage
     // HomePage,
     // ListPage,
     // SubListPage,
@@ -49,4 +57,12 @@ import { firebaseConfig } from '../environment';
    // EchoServiceProvider
   ]
 })
-export class AppModule {}
+export class AppModule {
+    // Make the injector to be available in the entire module
+  // so we can use it in the custom decorator
+  static injector: Injector;
+
+  constructor(injector: Injector) {
+    AppModule.injector = injector;
+  }
+}

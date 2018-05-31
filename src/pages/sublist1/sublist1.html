@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{selectedItem.title}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content class="card-background-page">
+    <!-- <ion-grid>
+        <ion-row>
+          <ion-col *ngFor="let item of items| async" *ngFor="let item of items| async"> -->
+              <ion-card *ngFor="let item of items| async" (click)="itemTapped($event, item)">
+                  <video   width="100%" controls autoplay loop muted playsinline webkit-playsinline looped  *ngIf="item.media_url.endsWith('mp4'); else cardTemp;">
+                      <source src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/videos%2F{{item.media_url}}?alt=media" type="video/mp4" />
+                  </video>
+                  <ng-template #cardTemp><img  src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/imgs%2F{{item.icon_url}}?alt=media" alt="No Image"/></ng-template>
+                </ion-card>
+          <!-- </ion-col>
+        </ion-row>
+      </ion-grid> -->
+  </ion-content>

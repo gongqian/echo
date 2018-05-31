@@ -1,0 +1,71 @@
+<!--
+  Generated template for the ManPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>man</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-header>
+    <ion-navbar no-border-bottom>
+      <ion-title>
+       Men Measurement
+      </ion-title>
+    </ion-navbar>
+
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="category">
+        <ion-segment-button value="leftHeart">
+          Left Heart
+        </ion-segment-button>
+        <ion-segment-button value="rightHeart">
+          Right Heart
+        </ion-segment-button>
+        <ion-segment-button value="RHHemodynamics">
+          RH Hemodynamics
+        </ion-segment-button>
+        <ion-segment-button value="Valves">
+            Valves
+          </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div [ngSwitch]="category">
+
+
+            <ion-card *ngSwitchCase="'leftHeart'" >
+               <img  src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/imgs%2Fmen-left.jpg?alt=media" alt="No Image"/>
+              <div class="card-title">Men's Left Heart</div>
+              <!-- <div class="card-subtitle">{{item.note}}</div>  -->
+            </ion-card>
+
+
+
+
+
+          <ion-card *ngSwitchCase="'rightHeart'" >
+              <img  src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/imgs%2Fmen-left.jpg?alt=media" alt="No Image"/>
+             <div class="card-title">Men's right Heart</div>
+             <!-- <div class="card-subtitle">{{item.note}}</div>  -->
+           </ion-card>
+
+          <ion-card *ngSwitchCase="'RHHemodynamics'" >
+              <img  src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/imgs%2Fmen-left.jpg?alt=media" alt="No Image"/>
+             <div class="card-title">Men's RH Hemodynamics</div>
+             <!-- <div class="card-subtitle">{{item.note}}</div>  -->
+           </ion-card>
+          <ion-card *ngSwitchCase="'Valves'" >
+              <img  src="https://firebasestorage.googleapis.com/v0/b/echo-da050.appspot.com/o/imgs%2Fmen-left.jpg?alt=media" alt="No Image"/>
+             <div class="card-title">Men's RH Hemodynamics</div>
+             <!-- <div class="card-subtitle">{{item.note}}</div>  -->
+           </ion-card>
+    </div>
+  </ion-content>

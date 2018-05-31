@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<!-- <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
       <ion-title>Echo</ion-title>
@@ -14,4 +14,21 @@
     </ion-list>
   </ion-content>
 </ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav> -->
+<ion-menu persistent="true" [content]="content" (ionClose)="collapseMenuOptions()">
+	<ion-header>
+		<ion-toolbar color="primary">
+			<ion-title>{{ (sideMenuSettings.accordionMode ? 'Accordion' : 'Default') + ' menu' }}</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+
+		<!-- side menu content -->
+		<side-menu-content [settings]="sideMenuSettings" [options]="options" (change)="onOptionSelected($event)"></side-menu-content>
+
+	</ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

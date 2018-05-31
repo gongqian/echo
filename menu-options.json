@@ -1,0 +1,165 @@
+{
+  "options": [{
+      "iconName": "home",
+      "displayText": "Home",
+      "component": "Home-Page",
+      "title": "Home"
+    },
+    {
+      "displayText": "Left Ventricle",
+      "suboptions": [{
+          "iconName": "basket",
+          "displayText": "ESVi",
+          "component": "Basic-Page",
+          "childItems": "esvi",
+          "title": "ESVi"
+        },
+        {
+          "iconName": "bookmark",
+          "displayText": "EDVi",
+          "component": "SubOptionTwoPage",
+          "childItems": "edvi",
+          "title": "EDVi"
+
+        },
+        {
+          "iconName": "bug",
+          "displayText": "Dynamic Badge",
+          "title": "Simpsons Biplane EF(%)",
+          "component": ""
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Lateral Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Medical Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        }
+      ]
+    },
+    {
+      "displayText": "Left Atrium",
+      "suboptions": [{
+          "iconName": "basket",
+          "displayText": "ESVi",
+          "component": "Basic-Page",
+          "childItems": "esvi",
+          "title": "ESVi"
+        },
+        {
+          "iconName": "bookmark",
+          "displayText": "EDVi",
+          "component": "SubOptionTwoPage",
+          "childItems": "edvi",
+          "title": "EDVi"
+
+        },
+        {
+          "iconName": "bug",
+          "displayText": "Dynamic Badge",
+          "title": "Simpsons Biplane EF(%)",
+          "component": ""
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Lateral Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Medical Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        }
+      ]
+    },
+    {
+      "displayText": "Right Ventricle",
+      "suboptions": [{
+          "iconName": "basket",
+          "displayText": "ESVi",
+          "component": "Basic-Page",
+          "childItems": "esvi",
+          "title": "ESVi"
+        },
+        {
+          "iconName": "bookmark",
+          "displayText": "EDVi",
+          "component": "SubOptionTwoPage",
+          "childItems": "edvi",
+          "title": "EDVi"
+
+        },
+        {
+          "iconName": "bug",
+          "displayText": "Dynamic Badge",
+          "title": "Simpsons Biplane EF(%)",
+          "component": ""
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Lateral Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Medical Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        }
+      ]
+    },
+    {
+      "displayText": "Right Atrium",
+      "suboptions": [{
+          "iconName": "basket",
+          "displayText": "ESVi",
+          "component": "Basic-Page",
+          "childItems": "esvi",
+          "title": "ESVi"
+        },
+        {
+          "iconName": "bookmark",
+          "displayText": "EDVi",
+          "component": "SubOptionTwoPage",
+          "childItems": "edvi",
+          "title": "EDVi"
+
+        },
+        {
+          "iconName": "bug",
+          "displayText": "Dynamic Badge",
+          "title": "Simpsons Biplane EF(%)",
+          "component": ""
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Lateral Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        },
+        {
+          "iconName": "bug",
+          "displayText": "E/e' LV Medical Anulus",
+          "component": "",
+          "childItems": "lvsbef",
+          "title": "E/e' LV Lateral Anulus"
+        }
+      ]
+    }
+  ]
+}

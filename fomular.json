@@ -1,0 +1,67 @@
+{
+  "edvi": {
+
+    "var1" :{
+      "label" : "EDV",
+      "value" : null
+    },
+    "var2":{
+      "label" : "BSA",
+      "value" : null
+    },
+    "formula" : "Math.round(100*(EDV/(BSA+0.0000001)))/100",
+    "node" : "The normal range of EDVI is 35-75; Mild range is 76-86; Moderate range is 87-96;Severe/abnormal range is >=97.",
+    "result":{
+      "label": "EDVI",
+      "value": null
+    },
+    "diagnosis" :{
+      "label" : "Patient Diagnosis",
+      "value" : ""
+    }
+
+
+  },
+  "esvi": {
+    "var1" :{
+      "label" : "ESV",
+      "value" : null
+    },
+    "var2":{
+      "label" : "BSA",
+      "value" : null
+    },
+    "formula" : "Math.round(100*(ESV/(BSA+0.0000001)))/100",
+    "node" : "The normal range of ESVI is 12-30; Mild range is 31-36; Moderate range is 37-42; Severe/abnormal range is >=43. ",
+    "result":{
+      "label": "ESVI",
+      "value": null
+    },
+    "diagnosis" :{
+      "label" : "Patient Diagnosis",
+      "value" : ""
+    }
+
+  },
+  "lvsbef": {
+    "var1" :{
+      "label" : "EDV",
+      "value" : null
+    },
+    "var2":{
+      "label" : "ESV",
+      "value" : null
+    },
+    "formula" : "Math.round(10000*((EDV-ESV)/(EDV+0.0000001)))/100",
+    "node" : "",
+    "result":{
+      "label": "Simpson Biplance EF(%)",
+      "value": null,
+      "isPercentage" : true
+    },
+    "diagnosis" :{
+      "label" : "Patient Diagnosis",
+      "value" : ""
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "edvi": [{
+      "conditions": {
+        "all": [{
+          "fact": "result",
+          "operator": "lessThan",
+          "value": 35
+        }]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Input Error"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThanInclusive",
+            "value": 75
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThanInclusive",
+            "value": 35
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Normal"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThanInclusive",
+            "value": 86
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThan",
+            "value": 75
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Mild"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThanInclusive",
+            "value": 96
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThan",
+            "value": 86
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Moderate"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+          "fact": "result",
+          "operator": "greaterThan",
+          "value": 96
+        }]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Severe"
+        }
+      }
+    }
+  ],
+  "esvi": [{
+      "conditions": {
+        "all": [{
+          "fact": "result",
+          "operator": "lessThan",
+          "value": 12
+        }]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Input Error"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThanInclusive",
+            "value": 30
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThanInclusive",
+            "value": 12
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Normal"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThanInclusive",
+            "value": 36
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThan",
+            "value": 30
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Mild"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThanInclusive",
+            "value": 42
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThan",
+            "value": 36
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Moderate"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+          "fact": "result",
+          "operator": "greaterThan",
+          "value": 42
+        }]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Severe"
+        }
+      }
+    }
+  ],
+  "lvsbef": [{
+      "conditions": {
+        "all": [{
+          "fact": "result",
+          "operator": "greaterThanInclusive",
+          "value": 55
+        }]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Normal"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThan",
+            "value": 55
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThanInclusive",
+            "value": 45
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Mild"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+            "fact": "result",
+            "operator": "lessThan",
+            "value": 45
+          },
+          {
+            "fact": "result",
+            "operator": "greaterThanInclusive",
+            "value": 30
+          }
+        ]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Moderate"
+        }
+      }
+    },
+    {
+      "conditions": {
+        "all": [{
+          "fact": "result",
+          "operator": "lessThan",
+          "value": 30
+        }]
+      },
+      "event": {
+        "type": "message",
+        "params": {
+          "data": "Severe"
+        }
+      }
+    }
+  ]
+}
